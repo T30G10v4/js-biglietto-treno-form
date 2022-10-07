@@ -82,7 +82,8 @@ goBtn.addEventListener("click", function () {
     
 
     let price = parseInt(userKm.value) * costPerKm * discount;
-
+    console.log("price", price, typeof(price));
+    
     // 2 cifre decimali
     price *= 100;
     price = Math.round(price);
