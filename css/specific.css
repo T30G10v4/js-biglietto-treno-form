@@ -11,14 +11,26 @@
 /*------COMMON PARTS------*/
 
 /*------SPECIFIED PARTS BY ID------*/
-.primo {
 
-    background-color: var(--bg-color-primo);
+#data,
+#trains {
+
+    min-height: 50vh;
 
 }
 
-.secondo {
+#data {
 
-    background-color: var(--bg-color-secondo);
+    background-image: url(../img/trains.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.opaque {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 
 }

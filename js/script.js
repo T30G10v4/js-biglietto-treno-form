@@ -28,7 +28,10 @@ console.log("Btn", clearBtn, typeof(clearBtn));
 // Quando viene cliccato il mouse Genera...
 goBtn.addEventListener("click", function () {
 
-    result = "";
+    let userNameValue;
+    let userKmValue;
+    let userAgeValue;
+    let userPriceValue;
 
     // Recuperare il nome e cognome dalla cella
     const userName = document.getElementById("name-surname");
@@ -37,6 +40,8 @@ goBtn.addEventListener("click", function () {
 
     result=userName.value + " ";
     console.log("Name", result, typeof(result));
+
+    userNameValue = userName.value;
 
 
     // Recuperare i km percorsi e trasformarli in numero
@@ -47,6 +52,7 @@ goBtn.addEventListener("click", function () {
     result += userKm.value + " ";
     console.log("KM", result, typeof(result));
 
+    userKmValue = userKm.value;
 
     // Recuperare la fascia d'età
     const userAge = document.getElementById("age");
@@ -55,6 +61,8 @@ goBtn.addEventListener("click", function () {
 
     result += userAge.value + " ";
     console.log("Age", result, typeof(result));
+
+    userAgeValue = userAge.value;
 
     // Eseguire il calcolo
     let discount;
@@ -90,9 +98,32 @@ goBtn.addEventListener("click", function () {
     price /= 100;
     console.log("price", price, typeof(price));
 
-    // Scrivere i risultati
-    const ticket=document.getElementById("ticket").innerHTML = result + price;
+    userPriceValue = price;
 
+    // Scrivere i risultati
+    // const ticket=document.getElementById("ticket").innerHTML = result + price;
+
+    const tableName = document.getElementsByClassName("tableName");
+    const tableKm = document.getElementsByClassName("tableKm");
+    const tableAge = document.getElementsByClassName("tableAge");
+    const tablePrice = document.getElementsByClassName("tablePrice");
+
+    tableName[0].innerHTML = userNameValue;
+    tableName[1].innerHTML = userNameValue;
+    tableName[2].innerHTML = userNameValue;
+
+    tableKm[0].innerHTML = userKmValue;
+    tableKm[1].innerHTML = userKmValue;
+    tableKm[2].innerHTML = userKmValue;
+
+    tableAge[0].innerHTML = userAgeValue;
+    tableAge[1].innerHTML = userAgeValue;
+    tableAge[2].innerHTML = userAgeValue;
+
+    tablePrice[0].innerHTML = userPriceValue;
+    tablePrice[1].innerHTML = userPriceValue;
+    tablePrice[2].innerHTML = userPriceValue;
+    
 });
 
 // Quando viene cliccato il mouse Annulla...

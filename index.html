@@ -21,7 +21,7 @@
 </head>
 <body>
   
-  <div class="price">
+  <!-- <div class="price">
     <h2>Calcolo Biglietto</h2>
     <label for="name-surname">Nome Cognome</label>
     <input type="text" id="name-surname">
@@ -43,7 +43,81 @@
 
   <div class="result">
     <h2 id="ticket"></h2>
-  </div>
+  </div> -->
+
+  <section id="data" class="d-flex align-items-center">
+    <div class="container opaque">
+      <div class="row">
+        <div class="col text-center">
+          <label for="name-surname">Nome Cognome</label>
+          <input type="text" id="name-surname"></div>
+        <div class="col text-center">
+          <label for="kilometers">Km da percorrere</label>
+          <input type="text" id="kilometers">
+        </div>
+        <div class="col text-center">
+          <label for="age">Fascia d'età</label>
+          <select name="age" id="age">
+            <option value=""></option>
+            <option value="minor">Minorenne</option>
+            <option value="over65">Over 65</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-end">
+          <button id="go">Genera</button>
+        </div>
+        <div class="col">
+          <button id="clear">Annulla</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trains">
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome Cognome</th>
+            <th scope="col">Kilometri</th>
+            <th scope="col">Fascia età</th>
+            <th scope="col">Costo</th>
+            <th scope="col">Acquista</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td class="tableName"></td>
+            <td class="tableKm"></td>
+            <td class="tableAge"></td>
+            <td class="tablePrice"></td>
+            <td><button>Acquista</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td class="tableName"></td>
+            <td class="tableKm"></td>
+            <td class="tableAge"></td>
+            <td class="tablePrice"></td>
+            <td><button>Acquista</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td class="tableName"></td>
+            <td class="tableKm"></td>
+            <td class="tableAge"></td>
+            <td class="tablePrice"></td>
+            <td><button>Acquista</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
 
   <script src="js/script.js"></script>
 
